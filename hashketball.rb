@@ -137,6 +137,22 @@ def num_points_scored(name)
   return 'not found'
 end
 
+def player_search(stat, value, ret)
+  game_hash.each_value do |team|
+    team[:players].each do |player|
+      if player[stat] == value
+        return player[ret]
+      end
+    end
+  end
+end
+
+def player_by_number(number)
+  player_search(:number,number,:name)
+  
+  return 'not found'
+end
+
 def shoe_size(name)
   game_hash.each_value do |team|
     team[:players].each do |player|
