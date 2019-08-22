@@ -149,8 +149,6 @@ end
 
 def player_by_number(number)
   player_search(:number,number,:name)
-  
-  return 'not found'
 end
 
 def shoe_size(name)
