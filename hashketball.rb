@@ -145,6 +145,8 @@ def player_search(stat, value, ret)
       end
     end
   end
+  
+  return 'not found'
 end
 
 def player_by_number(number)
